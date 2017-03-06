@@ -1,0 +1,21 @@
+{
+  "name": "FrontEndTechnology",
+  "homepage": "https://github.com/leviscar/FrontEndTechnology",
+  "authors": [
+    "leviscar <liujunpeng1994@foxmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "echarts": "^3.4.0"
+  }
+}
