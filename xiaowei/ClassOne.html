@@ -120,12 +120,14 @@
     <h2>这里以后是一个侧栏，这是标题</h2>
     <h2>侧栏注册窗口标题</h2>
     <form action="">
-        请输入邮箱地址;<input type="text" value="这是一个文本输入框">
+        <label for="inputOne">请输入邮箱地址;</label><input type="text" id="inputOne" value="这是一个文本输入框">
         <p>邮箱地址请按格式输入</p>
-        请输入密码：<input type="text" value="这是一个文本输入框">请重复输入密码：<input type="text" value="这是一个文本输入框">
+        <span><label for="one">请输入密码：</label><input type="text" id="one" value="这是一个文本输入框"></span><span><label
+            for="two">请重复输入密码：</label><input type="text" id="two" value="这是一个文本输入框"></span>
         <p>密码请为6-16位英文数字</p>
         性别：<input type="radio" name="sex" value="男" checked> <input type="radio" name="sex" value="女" >
-        城市：<select name="cities">
+        <label for="cities">城市：</label>
+        <select name="cities" id="cities">
         <option value="beijing">北京</option>
         <option value="saab">上海</option>
         <option value="fiat">南京</option>

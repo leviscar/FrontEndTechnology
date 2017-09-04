@@ -1,0 +1,174 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>ThreeColumnLayout</title>-->
+    <!--<style>-->
+        <!--body{-->
+            <!--padding: 20px;-->
+            <!--width: 100%;-->
+            <!--height: 100%;-->
+        <!--}-->
+
+        <!--body>div{-->
+            <!--width: 100%;-->
+            <!--height: 100%;-->
+            <!--padding: 20px;-->
+            <!--background-color: #eee;-->
+        <!--}-->
+
+        <!--/*body>div>div{*/-->
+            <!--/*float: left;*/-->
+            <!--/*padding: 20px;*/-->
+            <!--/*height: 100%;*/-->
+        <!--/*}*/-->
+        <!--/*body>div>div:nth-child(1){*/-->
+            <!--/*width: 200px;*/-->
+        <!--/*}*/-->
+        <!--/**/-->
+        <!--/*body>div>div:nth-child(3){*/-->
+            <!--/*width: 120px;*/-->
+        <!--/*}*/-->
+        <!--body>div>div:nth-child(3) img{-->
+            <!--text-align: center;-->
+
+        <!--}-->
+        <!--.borderLine{-->
+            <!--border-style: solid;-->
+            <!--border-color: #999;-->
+            <!--border-width: 1px;-->
+        <!--}-->
+        <!--div img{-->
+            <!--width: 80px;-->
+            <!--height: 80px;-->
+        <!--}-->
+        <!--.float{-->
+            <!--float: left;-->
+        <!--}-->
+        <!--.clearfix:after{-->
+            <!--content: ".";-->
+            <!--display: block;-->
+            <!--height: 0;-->
+            <!--visibility: hidden;-->
+            <!--clear: both;-->
+        <!--}-->
+        <!--.left {-->
+            <!--float: left;-->
+            <!--width: 200px;-->
+            <!--padding: 20px;-->
+
+        <!--}-->
+        <!--.right {-->
+            <!--width: 120px;-->
+            <!--float: right;-->
+            <!--padding: 20px;-->
+        <!--}-->
+        <!--.main {-->
+            <!--margin-left: 220px;-->
+            <!--margin-right: 140px;-->
+            <!--padding: 20px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="borderLine" id="wrapper">-->
+    <!--<div class=" left">-->
+        <!--<img src="../images/threeColumnLayout/IMWEB.png" alt="团队logo" class="float">-->
+        <!--<p>IMWeb团队</p>-->
+    <!--</div>-->
+    <!--<div class=" main clearfix">-->
+        <!--"IMWEB团队正式成立是时间是2011年6月7日，团队创立之初是负责腾讯最核心的基础业务，QQ注册， QQ登录（ptlogin），-->
+        <!--QQ资料和关系链拓展等基础服务。后转型进行应用开发，分别投入Q+，QQ圈子， QQ匿名聊，QQ群整体业务等。-->
+        <!--目前主要负责腾讯在线教育战略产品教育相关腾讯课堂，以及互动视频（花样直播、now直播等）研发工作。-->
+        <!--IMWeb团队成员目前已分布全国各大互联网企业，或有些在创业公司担当要职。-->
+        <!--非官方角度来看，团队很年轻，有三个美女程序猿，团队氛围比较开放，和学校里应该基本一致，大家都是一起为了技术成长和项目结果而努力。-->
+        <!-- -  项目上，直播和教育都很好玩的项目，项目常规的web来讲多了音视频这一块（相关技术可以看qcon上吴浩的分享）。 当然，项目是一致在变化的。。-->
+        <!--所以，团队小伙伴会经常思考，项目挂了，还会留下什么。因为项目是公司重点项目，所以工作压力也大。。呵呵。- 技术上，腾讯系里算top部分，虽然名气还不够大，-->
+        <!--但技术专研和应用上成果还是比较喜人的。 对技术尝试也比较激进，基本在新的技术架构和解决方案冒出来的时候，我们都会在内部做研究和分析，适时的在产品上进行试验。-->
+        <!--去年有写过一些总结，可以参考。 谈谈IMWeb Team 2015下半年的技术规划吧 ，我们的愿景是做一个有技术情怀的技术团队。 同构和跨多端以及其他提升研发效率，让开发者更优秀的基础建设，是我们一致努力的目标。-->
+        <!-- - 分享氛围上， 团队基本上每周都会有技术分享（这个大部分优秀的团队都可以做到），然后每年会有一次对外的团队技术沙龙，类似前端圈走进IMWeb， IMWebConf之类的。算是对外技术输出的一个固化。 然后，每年都会有高端技术会议的议题，-->
+        <!--比如前年的velocity beijing，去年和今年的QCon，我们都有讲师输出。 同时，我们对一些公司也有定期的技术和管理上的交流。比如oppo等。 腾讯内部的大讲堂就不赘述了。-->
+    <!--</div>-->
+    <!--<div class="right ">-->
+        <!--<img src="" alt="个人logo1" class="clearfix">-->
+        <!--<img src="" alt="个人logo2" class="clearfix">-->
+        <!--<img src="" alt="个人logo3" class="clearfix">-->
+        <!--<img src="" alt="个人logo4" class="clearfix">-->
+    <!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThreeColumnLayout</title>
+    <style>
+        body{
+            padding: 20px;
+            border: solid 1px;
+        }
+        .container{
+            padding: 20px;
+            border: solid 1px;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            padding: 20px;
+            border: solid 1px;
+        }
+        div img{
+            width: 80px;
+            height: 80px;
+            border: solid 1px;
+        }
+        .right {
+            width: 120px;
+            float: right;
+            text-align: center;
+            padding: 20px;
+            border: solid 1px;
+
+        }
+        .main {
+            margin-left: 240px;
+            margin-right: 160px;
+            padding: 20px;
+            border: solid 1px;
+        }
+        .float{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <img src="../images/threeColumnLayout/IMWEB.png" alt="团队logo" class="float">
+        <p>IMWeb团队</p>
+    </div>
+    <div class="right">
+        <img src="" alt="个人logo1" class="clearfix">
+        <img src="" alt="个人logo2" class="clearfix">
+        <img src="" alt="个人logo3" class="clearfix">
+        <img src="" alt="个人logo4" class="clearfix">
+    </div>
+    <div class="main">
+        "IMWEB团队正式成立是时间是2011年6月7日，团队创立之初是负责腾讯最核心的基础业务，QQ注册， QQ登录（ptlogin），
+        QQ资料和关系链拓展等基础服务。后转型进行应用开发，分别投入Q+，QQ圈子， QQ匿名聊，QQ群整体业务等。
+        目前主要负责腾讯在线教育战略产品教育相关腾讯课堂，以及互动视频（花样直播、now直播等）研发工作。
+        IMWeb团队成员目前已分布全国各大互联网企业，或有些在创业公司担当要职。
+        非官方角度来看，团队很年轻，有三个美女程序猿，团队氛围比较开放，和学校里应该基本一致，大家都是一起为了技术成长和项目结果而努力。
+         -  项目上，直播和教育都很好玩的项目，项目常规的web来讲多了音视频这一块（相关技术可以看qcon上吴浩的分享）。 当然，项目是一致在变化的。。
+        所以，团队小伙伴会经常思考，项目挂了，还会留下什么。因为项目是公司重点项目，所以工作压力也大。。呵呵。- 技术上，腾讯系里算top部分，虽然名气还不够大，
+        但技术专研和应用上成果还是比较喜人的。 对技术尝试也比较激进，基本在新的技术架构和解决方案冒出来的时候，我们都会在内部做研究和分析，适时的在产品上进行试验。
+        去年有写过一些总结，可以参考。 谈谈IMWeb Team 2015下半年的技术规划吧 ，我们的愿景是做一个有技术情怀的技术团队。 同构和跨多端以及其他提升研发效率，让开发者更优秀的基础建设，是我们一致努力的目标。
+         - 分享氛围上， 团队基本上每周都会有技术分享（这个大部分优秀的团队都可以做到），然后每年会有一次对外的团队技术沙龙，类似前端圈走进IMWeb， IMWebConf之类的。算是对外技术输出的一个固化。 然后，每年都会有高端技术会议的议题，
+        比如前年的velocity beijing，去年和今年的QCon，我们都有讲师输出。 同时，我们对一些公司也有定期的技术和管理上的交流。比如oppo等。 腾讯内部的大讲堂就不赘述了。
+
+    </div>
+</div>
+</body>
+</html>

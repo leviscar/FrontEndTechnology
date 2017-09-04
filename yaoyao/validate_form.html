@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validateForm</title>
+    <style type="text/css">
+        *{margin:0;padding: 0}
+        body{
+            width: 100%;
+            height: 980px;
+        }
+
+        main {
+            position: relative;
+            background: white;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            resize: both;
+            overflow: auto;
+        }
+
+        main form {
+            background:white;
+            color: black;
+            width: 60%;
+            height: 60%;
+            margin: 0;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            padding: 20px;
+        }
+        .borderLine{
+            border: 1px solid #000000;
+        }
+        .submitButton{
+            width: 100px;
+            height:36px;
+            color: #ffffff;
+            font-size:15px;
+            letter-spacing: 1px;
+            background: #3385ff;
+            border-bottom: 1px solid #2d78f4;
+            outline: medium;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+        }
+        main div{
+            overflow: hidden;
+            position: relative;
+        }
+        .title{
+            width: 100%;
+            height: 24%;
+        }
+        span{
+            display: flex;
+            margin: 5px;
+            float: left;
+            height: 100%;
+        }
+        .title span:nth-child(1){
+            font-size:26px;
+            font-weight:bold;
+            position: absolute;
+            left: 10%;
+            top: 25%;
+
+        }
+        .title span:nth-child(2){
+            justify-content: center;
+            position: absolute;
+            left: 20%;
+            top: 25%;
+
+        }
+        .title span:nth-child(3){
+            justify-content: center;
+            position: absolute;
+            right: 10%;
+            top: 25%;
+
+        }
+        .title input {
+            width: 300px;
+            height: 50%;
+            border-radius: 5px;
+
+        }
+        .showLine{
+            width: 100%;
+            height: 9%;
+        }
+        .showLine label{
+            font-size:12px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<main>
+    <form action="">
+        <div class="borderLine title" >
+            <span>账号</span>
+            <span>
+                <input type="text" id="account">
+            </span>
+            <span>
+                <button class="submitButton">验证</button>
+            </span>
+
+        </div>
+        <div class="borderLine showLine">
+
+        </div>
+        <div class="borderLine title">
+            <label for="account">名字</label><input type="text" id="name"><button class="submitButton">验证</button>
+        </div>
+        <div class="borderLine showLine">
+
+        </div>
+        <div class="borderLine title">
+            <label for="account">公司</label><input type="text" id="company"><button class="submitButton">验证</button>
+        </div>
+        <div class="borderLine showLine">
+
+        </div>
+    </form>
+</main>
+<script>
+
+</script>
+</body>
+</html>
