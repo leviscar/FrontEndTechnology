@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="myDiv"> right click or ctrl + click</div>
+	<ul id="myMenu" style="position: absolute;visibility: hidden;background-color: silver">
+		<li><a href="baidu.com">baidu</a></li>
+		<li><a href="360.com">360</a></li>
+		<a href="qq.com">qq</a>
+	</ul>
+	<input type="text">
+	<script>
+		
+		var handler =function(event){
+			switch(event.type){
+				case "click":
+					alert("Clicked!!!!!");
+					break;
+				case "dblclick":
+					alert("double click!!!");
+					break;
+				case "mouseover":
+					event.target.style.backgroundColor="red";
+					// alert("mouseover!!!");
+					break;
+				case "mouseout":
+					event.target.style.backgroundColor="blue";
+					// alert("mouseout!!!");
+					break;
+			};
+		}
+
+
+		var EventUtil={
+			addHandler: function(element,type,handler){
+				if(element.addEventListener){
+					element.addEventListener(type,handler,false);
+				}
+				else if(element.attachEvent){
+					element.attachEvent("on"+type,handler);
+				}else{
+					element["on"+type]=handler;
+				}
+			
+			},
+			removeHandler: function(element,type,handler){
+				if(element.removeEventListener){
+					element.removeEventListener(type,handler,false);
+				}else if(element.detachEvent){
+					element.detachEvent("on"+type,handler);
+				}else{
+					element["on"+type]=null;
+				}
+
+			},
+
+			getEvent: function(event){
+				return event?event:window.event;
+			},
+			getTarget: function(event){
+				return event.target||event.srcElement;
+			},
+
+			preventDefault: function(event){
+				if(event.preventDefault){
+					event.preventDefault();
+				}else{
+					event.returnValue = false;
+				}
+			}
+		};
+
+
+		EventUtil.addHandler(window,"resize",function(){
+			alert("resize!!!!!");
+		})
+
+		EventUtil.addHandler(window,"load",function(event){
+			var div = document.getElementById("myDiv");
+			EventUtil.addHandler(div,"contextmenu",function(event){
+				console.log("getContext");
+				event = EventUtil.getEvent(event);
+				EventUtil.preventDefault(event);
+
+				var menu=document.getElementById("myMenu");
+				menu.style.left = event.clientX+"px";
+				menu.style.top = event.clientY+"px";
+				menu.style.visibility="visible";
+			});
+
+		});
+
+		EventUtil.addHandler(document,"click",function(event){
+				document.getElementById("myMenu").style.visibility="hidden";
+		});
+
+		EventUtil.addHandler(window,"beforeunload",function(event){
+			event = EventUtil.getEvent(event);
+			var message = "I'm really going to miss you if you go.";
+
+			event.returnValue = message;
+			alert(message);
+			return message;
+		});
+	</script>
+</body>
+</html>
