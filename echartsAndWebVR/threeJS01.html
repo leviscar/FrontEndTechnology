@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>threeJS01</title>
+    <script type="text/javascript" src="js/three.js"></script>
+    <style>
+        canvas{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body  onload="init()">
+    
+    <canvas id="mainCanvas" ></canvas>
+    <script>
+
+        /*初始化*/
+        function init(){
+
+            // 将渲染器与Canvas元素绑定
+            var renderer = new THREE.WebGLRenderer({
+                canvas: document.getElementById("mainCanvas")
+            });
+            
+            /*设置背景颜色为黑色*/
+            renderer.setClearColor(0x000000);
+
+            /*创建场景*/
+            var scene = new THREE.Scene();
+
+            /*定义照相机*/
+            var camera = new THREE.OrthographicCamera(-2, 2, 1.5, -1.5, 1, 10);
+            camera.position.set(1.25, 0.5, 5);
+            scene.add(camera);
+
+            /*创建一个长方体*/
+            var cube = new THREE.Mesh(new THREE.CubeGeometry(1,1,1),
+                new THREE.MeshBasicMaterial({
+                    color:0xff0000
+                })
+            );
+
+            scene.add(cube);
+
+            /*创建一个圆环*/
+            var tube = new THREE.Mesh(THREE.TorusGeometry(1,0.1,4,8),
+                new THREE.MeshBasicMaterial({
+                    color:0x223433
+                })
+            ) ;
+            scene.add(tube);
+            /*渲染器渲染效果*/
+            renderer.render(scene,camera);
+        }
+    </script>
+</body>
+</html>
