@@ -5,8 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>bbTask04</title>
+    <style>
+        span{
+            width: 80px;
+            height: 80px;
+            color: white;
+            background-color: red;
+        }
+    
+    </style>
 </head>
 <body>
-    
+    <div id="myContent">
+        <input type="number" id="myInput"><button >左侧入</button><button >右侧入</button>&nbsp;&nbsp;&nbsp;&nbsp;<button>左侧出</button><button>右侧出</button>
+        <br>
+        <hr>
+        <div id="numQueue">
+            
+        </div>
+    </div>
+
+    <script>
+        var myInput = document.getElementById("myInput");
+        var myButton = document.getElementsByTagName("button");
+
+        myButton[0].addEventListener("click",function(event){
+              var span = document.createElement("span");
+              var numQueue = document.getElementById("numQueue");
+              span.textContent = myInput.value;
+              if(numQueue.childElementCount!==0){
+                  var leftChild=numQueue.firstChild;
+                  numQueue.insertBefore(span,leftChild);
+              }else{
+                  numQueue.appendChild(span);
+              }
+              alert("从左边插入"+myInput.value);
+        },false);
+
+        myButton[1].addEventListener("click",function(event){
+            var span = document.createElement("span");
+            var numQueue = document.getElementById("numQueue");
+            span.textContent = myInput.value;
+            numQueue.appendChild(span);
+            alert("从右边插入"+myInput.value);
+
+        },false);
+
+        myButton[2].addEventListener("click",function(event){
+            var numQueue = document.getElementById("numQueue");
+            numQueue.removeChild(numQueue.firstElementChild);
+
+        },false);
+
+        myButton[3].addEventListener("click",function(event){
+            var numQueue = document.getElementById("numQueue");
+            numQueue.removeChild(numQueue.lastElementChild);
+
+        },false);     
+
+    </script>
 </body>
 </html>
